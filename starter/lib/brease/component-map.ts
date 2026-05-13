@@ -29,14 +29,17 @@ export const componentMap: Record<string, React.ComponentType<any>> = {
 };
 
 export const contextData: BreaseContextConfig = {
+  // TODO: replace these placeholders with the navigation IDs from your
+  // Brease project. The keys (`headerNavigation`, `footerNavigation`) are
+  // used by `<Header />` and `<FooterSection />` to look up the right nav.
   navigations: [
     {
       key: "headerNavigation",
-      id: "nav-a1c2b734-2dfe-476a-ad95-9ad93b7179ed",
+      id: "REPLACE_WITH_HEADER_NAV_ID",
     },
     {
       key: "footerNavigation",
-      id: "nav-a1c2b76b-4cc1-4bb3-8c2c-e905fa48e8c5",
+      id: "REPLACE_WITH_FOOTER_NAV_ID",
     },
   ],
   collections: [],

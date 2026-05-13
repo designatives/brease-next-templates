@@ -31,7 +31,7 @@ pnpm dev
 app/
   layout.tsx                # Root <html>/<body>, global styles
   [[...slug]]/
-    layout.tsx              # BreaseContext + Header/Footer
+    layout.tsx              # BreaseContext + Header (footer is a CMS section)
     page.tsx                # generateMetadata + BreasePage
   sitemap.ts
   robots.ts
@@ -39,7 +39,7 @@ app/
 components/
   layout/
     Header.tsx              # 'use client' — nav + locale switcher
-    Footer.tsx
+  section/                  # one Client Component per CMS section key
 lib/
   brease/
     component-map.ts        # sectionMap + BreaseContextConfig
@@ -48,8 +48,9 @@ lib/
 
 ## Where to update before going live
 
-- `lib/brease/component-map.ts` — replace `REPLACE_WITH_NAV_ID` with the
-  navigation IDs from your Brease project.
+- `lib/brease/component-map.ts` — replace `REPLACE_WITH_HEADER_NAV_ID` and
+  `REPLACE_WITH_FOOTER_NAV_ID` with the navigation IDs from your Brease
+  project.
 - `app/[[...slug]]/page.tsx` — replace the `metadataBase` URL with your
   production domain.
 - `app/robots.ts` — replace the `https://example.com` site URL.
